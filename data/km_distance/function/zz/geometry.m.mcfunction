@@ -1,4 +1,4 @@
-#> km_distance:zz/geometry
+#> km_distance:zz/geometry.m
 #
 # ローカル相対座標をZ軸向きに回転させてtp
 #

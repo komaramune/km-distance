@@ -1,4 +1,4 @@
-#> km_distance:zz/get_delta
+#> km_distance:zz/get_delta.m
 #
 # 差分取得
 #
