@@ -9,6 +9,3 @@ $execute facing ^ ^$(y) ^$(z) facing ^$(x) ^-$(y) ^$(z) facing ^ ^$(y) ^$(z) run
 
 # マーカーのPos取得
 data modify storage km_distance: out set from entity @s Pos[2]
-
-# マーカー削除
-kill @s

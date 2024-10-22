@@ -14,9 +14,9 @@ data modify storage km_distance: tmp.y set from storage km_distance: tmp.pos[1]
 data modify storage km_distance: tmp.z set from storage km_distance: tmp.pos[2]
 
 # 負の値を正に
-execute unless predicate {"condition":"minecraft:value_check","value":{"type":"minecraft:storage","storage":"km_distance:","path":"tmp.x"},"range":{"min":0}} run data modify storage km_distance: tmp.x set string storage km_distance: tmp.x 1 -1
-execute unless predicate {"condition":"minecraft:value_check","value":{"type":"minecraft:storage","storage":"km_distance:","path":"tmp.y"},"range":{"min":0}} run data modify storage km_distance: tmp.y set string storage km_distance: tmp.y 1 -1
-execute unless predicate {"condition":"minecraft:value_check","value":{"type":"minecraft:storage","storage":"km_distance:","path":"tmp.z"},"range":{"min":0}} run data modify storage km_distance: tmp.z set string storage km_distance: tmp.z 1 -1
+execute positioned as @s unless predicate {"condition":"minecraft:location_check","predicate":{"position":{"x":{"min":0}}}} positioned 0.0 ~ ~ rotated 90 0 run function km_distance:zz/abs/x.m with storage km_distance: tmp
+execute positioned as @s unless predicate {"condition":"minecraft:location_check","predicate":{"position":{"y":{"min":0}}}} positioned ~ 0.0 ~ rotated 0 90 run function km_distance:zz/abs/y.m with storage km_distance: tmp
+execute positioned as @s unless predicate {"condition":"minecraft:location_check","predicate":{"position":{"z":{"min":0}}}} positioned ~ ~ 0.0 rotated 180 0 run function km_distance:zz/abs/z.m with storage km_distance: tmp
 
 # 幾何学実行
 execute positioned 0.0 0.0 0.0 rotated 0 0 run function km_distance:zz/geometry.m with storage km_distance: tmp
