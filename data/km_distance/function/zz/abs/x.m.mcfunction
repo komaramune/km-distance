@@ -1,3 +1,2 @@
-$tp @s ^ ^ ^$(x)
-
-data modify storage km_distance: tmp.x set from entity @s Pos[0]
+$data modify storage km_distance: tmp.abs set value "$(x)"
+data modify storage km_distance: tmp.x set string storage km_distance: tmp.abs 1
