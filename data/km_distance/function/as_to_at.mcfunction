@@ -13,7 +13,7 @@
 execute positioned as @s summon marker run function km_distance:zz/get_pos
 
 # 実行位置と実行者位置の差分取得
-execute rotated 180 0 summon marker run function km_distance:zz/get_delta.m with storage km_distance: tmp
+execute rotated 180 -90 summon marker run function km_distance:zz/get_delta.m with storage km_distance: tmp
 
 # ストレージ掃除
 data remove storage km_distance: tmp

@@ -5,7 +5,7 @@
 # @internal
 
 # 差分の位置にtp
-$execute positioned ^$(x) ^ ^$(z) rotated 0 90 run tp @s ^ ^ ^$(y)
+$tp @s ^$(x) ^$(z) ^$(y)
 
 # マーカーのPos取得
 data modify storage km_distance: tmp.pos set from entity @s Pos
